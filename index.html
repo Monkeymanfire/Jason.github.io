@@ -8,187 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #eeecea;
-      --fg: #1a1814;
-      --fg-muted: #7a7670;
-      --border: #ccc9c2;
-    }
-    [data-theme="dark"] {
-      --bg: #141210;
-      --fg: #ede9e2;
-      --fg-muted: #908b83;
-      --border: #2e2b27;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html, body {
-      height: 100%;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      -webkit-font-smoothing: antialiased;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    /* NAV */
-    .nav-wrapper {
-      position: relative;
-      padding: 1.5rem 2.5rem;
-      flex-shrink: 0;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      color: var(--fg-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-      cursor: pointer;
-    }
-
-    .nav-links a:hover { color: var(--fg); }
-
-    .nav-links a.active {
-      color: var(--fg);
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      text-decoration-thickness: 1px;
-    }
-
-    #theme-toggle {
-      position: absolute;
-      top: 1.5rem;
-      right: 2.5rem;
-      background: none;
-      border: none;
-      width: 2rem;
-      height: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: var(--fg);
-      transition: opacity 0.2s;
-    }
-    #theme-toggle:hover { opacity: 0.5; }
-
-    /* PAGE STACK — all pages sit in the same flow space */
-    .page-stack {
-      flex: 1;
-      position: relative;
-    }
-
-    .page {
-      position: absolute;
-      inset: 0;
-      padding: 2.5rem 2.5rem 5rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s ease;
-      overflow-y: auto;
-    }
-
-    .page.active {
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    .inner {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    /* HOME */
-    #page-home h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.25rem, 5vw, 3.5rem);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: 0.5rem;
-    }
-
-    #page-home .tagline {
-      font-size: 0.9rem;
-      color: var(--fg-muted);
-      font-weight: 300;
-      margin-bottom: 3rem;
-    }
-
-    #page-home .bio {
-      font-size: 1rem;
-      line-height: 1.85;
-      border-top: 1px dashed var(--border);
-      padding-top: 2.5rem;
-    }
-
-    #page-home .bio strong { font-weight: 500; }
-    #page-home .bio p + p { margin-top: 1.25rem; }
-
-    /* ABOUT / CONTACT */
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
-      font-style: italic;
-      font-weight: 400;
-      color: var(--fg-muted);
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px dashed var(--border);
-    }
-
-    .body-text {
-      font-size: 1rem;
-      line-height: 1.85;
-      font-weight: 300;
-      margin-top: 2rem;
-    }
-
-    .body-text strong { font-weight: 500; }
-    .body-text p + p { margin-top: 1.25rem; }
-    .body-text a { color: var(--fg); text-underline-offset: 3px; }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px dashed var(--border);
-      padding: 1.75rem 2.5rem;
-      font-size: 0.85rem;
-      color: var(--fg-muted);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      flex-shrink: 0;
-    }
-
-    footer a {
-      color: var(--fg-muted);
-      text-decoration: none;
-    }
-    footer a:hover { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -233,7 +53,7 @@
       <div class="inner">
         <div class="section-title">Contact</div>
         <div class="body-text">
-          <p>Feel free to reach out via <a href="https://www.linkedin.com/in/jason-serpico/" target="_blank" rel="noopener noreferrer">LinkedIn</a> or drop me an email at <a href="mailto:jason@example.com">jason@example.com</a>.</p>
+          <p>Feel free to reach out via <a href="https://www.linkedin.com/in/jason-serpico/" target="_blank" rel="noopener noreferrer">LinkedIn</a> or drop me an email at <a href="/cdn-cgi/l/email-protection#bdd7dcced2d3fdd8c5dcd0cdd1d893ded2d0"><span class="__cf_email__" data-cfemail="523833213d3c12372a333f223e377c313d3f">[email&#160;protected]</span></a>.</p>
         </div>
       </div>
     </div>
@@ -245,7 +65,7 @@
     <a href="https://www.linkedin.com/in/jason-serpico/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // ─── Bio content (single source of truth) ───────────────────────────────
     const BIO_HTML = `
       <p>I'm <strong>Jason Serpico</strong>, a Technical Expert at Apple, where I help people get the most out of their devices and the technology around them. With a passion for problem-solving and clear communication, I bridge the gap between complex technical concepts and everyday users.</p>
@@ -297,16 +117,4 @@
       const target = document.getElementById('page-' + id);
       if (target) target.classList.add('active');
       const activeLink = document.querySelector(`.nav-links a[data-page="${id}"]`);
-      if (activeLink) activeLink.classList.add('active');
-    }
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        showPage(this.getAttribute('data-page'));
-      });
-    });
-  </script>
-
-</body>
-</html>
+      if (activeLink) activeLink.
